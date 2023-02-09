@@ -36,7 +36,12 @@ function getComputerChoice(num){
 
 function getPlayerChoice(){
     let value = prompt("Please Enter a value, Rock, Paper or Scissors.")
-    return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();
+    if (!(value === "rock"|| value === "Rock"|| value === "RocK" || value === "ROCK" || value === "paper" || value === "Paper" || value === "PapeR" || value === "PAPER" || value === "scissors" || value === "Scissor" || value === "Scissors"|| value === "scissor" || value === "ScissorS" || value === "SCISSORS")){
+       return getPlayerChoice();
+    }
+    else{
+        return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();}
+    
 }
 
 
