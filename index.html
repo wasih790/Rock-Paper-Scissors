@@ -9,7 +9,7 @@
 <body>
     <!-- Pseudocode -->
     <!-- 1. create a function to return a random value for rock, paper and scissors by the computer -->
-    <!-- 2. ask paper for a string value, for rock, paper, or scissors -->
+    <!-- 2. ask player for a string value, for rock, paper, or scissors -->
         <!-- 2a. should accept rock, ROCK, RocK as a value-->
     <!-- 3. Write a function that plays a single round of Rock Paper Scissors. 
         The function should take two parameters, computer value and player values-->
@@ -22,7 +22,33 @@
     function randNum(){
         return Math.floor(Math.random() * 3) + 1;}
 
-console.log(randNum())
+function getComputerChoice(num){
+    if (num === 1){
+        return("Rock");
+    }
+    else if (num === 2){
+        return("Paper");
+    }
+    else{
+        return("Scissors");
+    }
+}
+
+function getPlayerChoice(){
+    let value = prompt("Please Enter a value, Rock, Paper or Scissors.")
+    return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();
+}
+
+
+
+let num = randNum();
+let computerSelection = getComputerChoice(num);
+let playerSelection = getPlayerChoice();
+
+console.log(`Computer Choice: ${computerSelection}`);
+console.log(`Player Choice: ${playerSelection}`);
+
+
 </script>
 
 
