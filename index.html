@@ -17,6 +17,10 @@
         <!-- 3b. return value should look like "You Lose! Paper beats Rock" -->
     <!-- make a function called game, and play 5 rounds of the game, to see the winner -->
 
+<h2>Rock Paper Scissors</h2>
+<p>you must enter a value of Rock Paper or Scissors for 5 times, because the game is for 5 rounds</p>
+<p>Please look at the console for the output</p>
+<p>A user interface on the browser screen will be added later</p>
 
 <script>
     function randNum(){
@@ -35,7 +39,7 @@
     }
 
     function getPlayerChoice(){
-        let value = prompt("Please Enter a value, Rock, Paper or Scissors");
+        let value = prompt("Please Enter a value, Rock, Paper or Scissors. \nThe Prompt will be called 5 times for 5 rounds. \nCheck Console screen after.");
         if (!(value === "rock"|| value === "Rock"|| value === "RocK" || value === "ROCK" || value === "paper" || value === "Paper" || value === "PapeR" || value === "PAPER" || value === "scissors" || value === "Scissor" || value === "Scissors"|| value === "scissor" || value === "ScissorS" || value === "SCISSORS")){
         return getPlayerChoice();
         }
@@ -88,16 +92,16 @@
 
             }
             if (compwin > playerwin){
-           return(`Computer wins the game with ${compwin} wins against ${playerwin}`)
+           console.log(`%c Computer wins the game with ${compwin} wins against ${playerwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px;  text-align: center`)
             }
             else if (playerwin > compwin){
-                return(`Player wins the game with ${playerwin} wins against ${compwin}`)
+                console.log(`%c Player wins the game with ${playerwin} wins against ${compwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center`)
             }
             else{
-                return(`It is a Tie with ${playerwin} for the player and ${compwin} for computer`)
+                console.log(`%c It is a Tie with ${playerwin} for the player and ${compwin} for computer`, `font-weight: 900;  font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center;`)
             }
         }
-
+    
 console.log(game());
 </script>
 
