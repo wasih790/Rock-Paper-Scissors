@@ -44,38 +44,38 @@
 
 
 
-    function game(){
-        let compwin = 0;
-        let playerwin = 0;
-            for (let i = 0; i < 5; i++){
-                console.log(`Round ${i+1}`);
-                let computerSelection = getComputerChoice(randNum());
-                let playerSelection = getPlayerChoice();
-                console.log(`Computer Choice: ${computerSelection}`);
-                console.log(`Player Choice: ${playerSelection}`);
-                let match = playRound(playerSelection, computerSelection);
-                if (match === 0){
-                    console.log("Tie for the round")
-                }
-                else if (match === 1){
-                    console.log (`Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
-                    compwin++;
-                }
-                else if (match === 2){
-                    console.log(`You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`);
-                    playerwin++;
-                }
+    // function game(){
+    //     let compwin = 0;
+    //     let playerwin = 0;
+    //         for (let i = 0; i < 5; i++){
+    //             console.log(`Round ${i+1}`);
+    //             let computerSelection = getComputerChoice(randNum());
+    //             let playerSelection = getPlayerChoice();
+    //             console.log(`Computer Choice: ${computerSelection}`);
+    //             console.log(`Player Choice: ${playerSelection}`);
+    //             let match = playRound(playerSelection, computerSelection);
+    //             if (match === 0){
+    //                 console.log("Tie for the round")
+    //             }
+    //             else if (match === 1){
+    //                 console.log (`Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
+    //                 compwin++;
+    //             }
+    //             else if (match === 2){
+    //                 console.log(`You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`);
+    //                 playerwin++;
+    //             }
 
-            }
-            if (compwin > playerwin){
-           console.log(`%c Computer wins the game with ${compwin} wins against ${playerwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px;  text-align: center`)
-            }
-            else if (playerwin > compwin){
-                console.log(`%c Player wins the game with ${playerwin} wins against ${compwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center`)
-            }
-            else{
-                console.log(`%c It is a Tie with ${playerwin} for the player and ${compwin} for computer`, `font-weight: 900;  font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center;`)
-            }
-        }
+    //         }
+    //         if (compwin > playerwin){
+    //        console.log(`%c Computer wins the game with ${compwin} wins against ${playerwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px;  text-align: center`)
+    //         }
+    //         else if (playerwin > compwin){
+    //             console.log(`%c Player wins the game with ${playerwin} wins against ${compwin}`, `font-weight: 900; font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center`)
+    //         }
+    //         else{
+    //             console.log(`%c It is a Tie with ${playerwin} for the player and ${compwin} for computer`, `font-weight: 900;  font-size: 20px;color: red; text-shadow: 3px 3px 0 8px; text-align: center;`)
+    //         }
+    //     }
     
-console.log(game());
+// console.log(game());
