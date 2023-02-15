@@ -25,7 +25,7 @@ body{
 .images{
     display: flex;
     border: 1px solid red;
-    margin-top: 100px;
+    margin-top: 20px;
     padding: 50px;
     justify-content: space-around;
 
@@ -36,8 +36,8 @@ body{
     background: white;
     text-align: center;
     border: 3px solid #3882f6;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 15px;
     box-shadow: 2px 4px 16px rgba(0,0,0,.2);
   
