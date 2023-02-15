@@ -28,17 +28,17 @@
             if ((playerSelection === "Rock" &&  computerSelection === "Rock") || 
             (playerSelection === "Paper" &&  computerSelection === "Paper") ||
             ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Scissors")){
-                console.log("Tie for the round");
+                return("Tie for the round");
             }
             else if ((playerSelection === "Rock" &&  computerSelection === "Paper") || 
             (playerSelection === "Paper" &&  computerSelection === "Scissors") ||
             ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Rock")){
-                console.log (`Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
+               return (`Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
             }
             else if ((computerSelection === "Rock" &&  playerSelection === "Paper") || 
             (computerSelection === "Paper" &&  (playerSelection === "Scissors" || playerSelection === "Scissor")) ||
             (computerSelection === "Scissors" &&  playerSelection === "Rock")){
-                console.log(`You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`)
+               return(`You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`)
             }
     }
 
@@ -91,6 +91,16 @@ const buttons = document.querySelectorAll('button');
 
 // we use the .forEach method to iterate through each button
 buttons.forEach((button) => {
-  button.addEventListener('click', () => console.log(playRound(button.id,getComputerChoice(randNum()))));
+  button.addEventListener('click', () => {
+    const output = document.querySelector('#output');
+    const content = document.createElement('div');
+    content.classList.add('content');
+    content.textContent = `${playRound(button.id,getComputerChoice(randNum()))}`;
+    output.appendChild(content);
+
+  })
+
+
+
 
 });
