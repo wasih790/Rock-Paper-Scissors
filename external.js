@@ -13,32 +13,32 @@
         }
     }
 
-    function getPlayerChoice(){
-        let value = prompt("Please Enter a value, Rock, Paper or Scissors. \nThe Prompt will be called 5 times for 5 rounds. \nCheck Console screen after.");
-        if (!(value === "rock"|| value === "Rock"|| value === "RocK" || value === "ROCK" || value === "paper" || value === "Paper" || value === "PapeR" || value === "PAPER" || value === "scissors" || value === "Scissor" || value === "Scissors"|| value === "scissor" || value === "ScissorS" || value === "SCISSORS")){
-        return getPlayerChoice();
-        }
-        else{
-            return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();}
+    // function getPlayerChoice(){
+    //     let value = prompt("Please Enter a value, Rock, Paper or Scissors. \nThe Prompt will be called 5 times for 5 rounds. \nCheck Console screen after.");
+    //     if (!(value === "rock"|| value === "Rock"|| value === "RocK" || value === "ROCK" || value === "paper" || value === "Paper" || value === "PapeR" || value === "PAPER" || value === "scissors" || value === "Scissor" || value === "Scissors"|| value === "scissor" || value === "ScissorS" || value === "SCISSORS")){
+    //     return getPlayerChoice();
+    //     }
+    //     else{
+    //         return value.charAt(0).toUpperCase() + value.substr(1).toLowerCase();}
         
-    }
+    // }
 
 
     function playRound(playerSelection, computerSelection) {
             if ((playerSelection === "Rock" &&  computerSelection === "Rock") || 
             (playerSelection === "Paper" &&  computerSelection === "Paper") ||
             ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Scissors")){
-                return (0);
+                console.log("Tie for the round");
             }
             else if ((playerSelection === "Rock" &&  computerSelection === "Paper") || 
             (playerSelection === "Paper" &&  computerSelection === "Scissors") ||
             ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Rock")){
-                return (1);
+                console.log (`Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
             }
             else if ((computerSelection === "Rock" &&  playerSelection === "Paper") || 
             (computerSelection === "Paper" &&  (playerSelection === "Scissors" || playerSelection === "Scissor")) ||
             (computerSelection === "Scissors" &&  playerSelection === "Rock")){
-                return (2);
+                console.log(`You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`)
             }
     }
 
@@ -79,3 +79,18 @@
     //     }
     
 // console.log(game());
+
+
+
+
+// const btn = document.querySelector('#Rock');
+// btn.addEventListener('click', () => {console.log(playRound('Rock',computerSelection));});
+
+
+const buttons = document.querySelectorAll('button');
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  button.addEventListener('click', () => console.log(playRound(button.id,getComputerChoice(randNum()))));
+
+});
