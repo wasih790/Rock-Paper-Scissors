@@ -21,3 +21,24 @@ body{
     font-weight: 800;
     border: 1px solid green;
 }
+
+.images{
+    display: flex;
+    border: 1px solid red;
+    margin-top: 100px;
+    padding: 50px;
+    justify-content: space-around;
+
+}
+
+
+.box {
+    background: white;
+    text-align: center;
+    border: 3px solid #3882f6;
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  
+}
