@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background: #1f2937;
+}
+
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 35px;
+    padding: 25px 0px;
+    font-weight: 800;
+    border: 1px solid green;
+}
