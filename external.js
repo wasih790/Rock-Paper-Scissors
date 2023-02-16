@@ -43,13 +43,13 @@ function wins(num, computerSelection, playerSelection){
        
     }
     else if (num === 1){
-        compWin++;
+        ++compWin;
        return( document.getElementById('output').textContent = `Computer Wins the round, You Lose! ${playerSelection} beats ${computerSelection}`);
         
       
     }
     else if (num === 2){
-        playWin++;
+        ++playWin;
         return(document.getElementById('output').textContent = `You Win the round, Computer Loses! ${computerSelection} beats ${playerSelection}`);
         
     }
@@ -75,8 +75,16 @@ buttons.forEach((button) => {
     let num = playRound(playerSelection,computerSelection);  
 
 
-
-    wins(num, playerSelection, computerSelection)
+    if(playWin === 3){
+        document.getElementById('game-win').textContent = "Player Wins the Game";
+    }
+    else if (compWin === 3){
+        document.getElementById('game-win').textContent = "Computer Wins the Game";
+    }
+    else{
+        wins(num, playerSelection, computerSelection)
+    }
+    
 
 
     
