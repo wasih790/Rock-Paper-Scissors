@@ -61,7 +61,7 @@ body{
 
 .result{
     display: flex;
-
+    margin-bottom: 15px;
     justify-content: center;
     gap: 35px;
 }
@@ -86,4 +86,10 @@ body{
     justify-content: center;
     font-size: 25px;
     margin-top: 5px;
+}
+
+#output{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
 }
