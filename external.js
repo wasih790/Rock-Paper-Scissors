@@ -16,16 +16,16 @@
     function playRound(playerSelection, computerSelection) {
             if ((playerSelection === "Rock" &&  computerSelection === "Rock") || 
             (playerSelection === "Paper" &&  computerSelection === "Paper") ||
-            ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Scissors")){
+            (playerSelection === "Scissors"  &&  computerSelection === "Scissors")){
                 return(0);
             }
             else if ((playerSelection === "Rock" &&  computerSelection === "Paper") || 
             (playerSelection === "Paper" &&  computerSelection === "Scissors") ||
-            ((playerSelection === "Scissors" || playerSelection === "Scissor") &&  computerSelection === "Rock")){
+            (playerSelection === "Scissors"  &&  computerSelection === "Rock")){
                return (1);
             }
             else if ((computerSelection === "Rock" &&  playerSelection === "Paper") || 
-            (computerSelection === "Paper" &&  (playerSelection === "Scissors" || playerSelection === "Scissor")) ||
+            (computerSelection === "Paper" &&  playerSelection === "Scissors" ) ||
             (computerSelection === "Scissors" &&  playerSelection === "Rock")){
                return(2)
             }
@@ -44,13 +44,13 @@ function wins(num, computerSelection, playerSelection){
     }
     else if (num === 1){
         compWin++;
-       return( document.getElementById('output').textContent = `Computer Wins the round, You Lose! ${computerSelection} beats ${playerSelection}`);
+       return( document.getElementById('output').textContent = `Computer Wins the round, You Lose! ${playerSelection} beats ${computerSelection}`);
         
       
     }
     else if (num === 2){
         playWin++;
-        return(document.getElementById('output').textContent = `You Win the round, Computer Loses! ${playerSelection} beats ${computerSelection}`);
+        return(document.getElementById('output').textContent = `You Win the round, Computer Loses! ${computerSelection} beats ${playerSelection}`);
         
     }
 }
@@ -76,9 +76,7 @@ buttons.forEach((button) => {
 
 
 
-
     wins(num, playerSelection, computerSelection)
-
 
 
     
