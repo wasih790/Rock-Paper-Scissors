@@ -41,6 +41,8 @@ buttons.forEach((button) => {
   button.addEventListener('click', () => {
     playerSelection = button.id;
     computerSelection = getComputerChoice(randNum())
+    document.getElementById('player').textContent = playerSelection;
+    document.getElementById('computer').textContent = computerSelection;
     document.getElementById('output').textContent =  playRound(playerSelection,computerSelection);
   })
 });
